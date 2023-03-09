@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Registration Page</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/CSS Files/bloodBankRegistration.css">
+    <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://kit.fontawesome.com/7f00eecb13.js" crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+  <form action="" method="post" name="bloodReg">
+        <div style="background-color: red; width: 42%; height: 713px; float:left;">
+        </div>
+        <div style="background-color: #fff; width:58%; height: 700px; float:left;">
+         <h2 class="title" align="center" style="margin:10px;">Blood Bank Registration</h2>
+         <div class="fields">
+            <div class="input-field align-left">
+               <i class="fas fa-user"></i>
+               <input type="text" placeholder="First Name" name="firstName" />
+             </div>
+             <div class="input-field align-right">
+               <i class="fas fa-user"></i>
+               <input type="text" placeholder="Last Name" name="lastName"/>
+             </div>
+             <div class="input-field align-left">
+               <i class="fa-solid fa-envelope"></i>
+               <input type="emailId" placeholder="Email" name="emailId"/>
+             </div>
+             <div class="input-field align-right">
+               <i class="fa-solid fa-phone"></i>
+               <input type="text"  placeholder="Phone No" name="phoneNo"/>
+             </div>
+           
+             <div class="input-field align-left ">
+               <select name="Blood Group" class="form-sel" required name="bloodGroup">
+                 <option value="" disabled selected hidden style="color:#333;">Blood Group</option>
+                 <option value="O+">O+</option>
+                 <option value="A+">A+</option>
+                 <option value="B+">B+</option>
+                 <option value="AB+">AB+</option>
+                 <option value="Bombay">Bombay</option>
+                 <option value="O-">O-</option>
+                 <option value="A-">A-</option>
+                 <option value="B-">B-</option>
+                 <option value="AB-">AB-</option>
+                </select>
+            </div>
+             <div class="input-field align-right">
+               <i class="fas fa-user"></i>
+               <input type="text" placeholder="Age" name="age"/>
+             </div>
+             <div class="input-field align-left">
+              <i class="fas fa-lock"></i>
+               <input type="password" placeholder="Password" name="pwd"/>
+             </div>
+             <div class="input-field align-right">
+              <i class="fas fa-lock"></i>
+               <input type="password" placeholder="Confirm Password" name="cpwd"/>
+             </div>
+          
+              <!-- rdiobutton -->
+          <label class="sty radioContainer"> Gender :</label>
+                 <label class="radioContainer align1">Male
+              <input type="radio" name="r1">
+              <span class="circle"></span>
+          </label>
+        
+          
+          <label class="radioContainer align2">Female
+              <input type="radio" name="r1">
+              <span class="circle"></span>
+          </label>
+          
+
+          <label class="radioContainer align3">Other
+              <input type="radio" name="r1">
+              <span class="circle"></span>
+          </label>
+          <div class="input-field align-right">
+            <div class="date-time-picker">
+            <input type="date" name="dob">
+             </div></div> 
+
+              <textarea cols="25" rows="7" placeholder="Address" name="addr"></textarea>
+
+              <input type="reset" value="Reset" class="button-style reset-sty">
+              <input type="submit" value="Register" class="button-style submit-sty">
+           
+              <div class="container">
+                <input type="file" id="file" accept="image/*" hidden>
+                <div class="img-area" data-img="">
+                  <i class='bx bxs-cloud-upload icon'></i>
+                  <h3>Upload Image</h3>
+                  <p>Image size must be less than <span>2MB</span></p>
+                </div>
+                <button class="select-image">Select Image</button>
+              </div>
+              <a href="index.html" class="login">Click here to Login</a>
+              <script src="/Javascript/script.js"></script>
+         </div>    
+        </div>
+    </div>
+  </form>
+</body>
+</html>

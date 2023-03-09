@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="/CSS Files/adminaddCampaign.css">
+    <link rel="stylesheet" href="/CSS Files/sidebar.css">
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/7f00eecb13.js" crossorigin="anonymous"></script>
+    <!-- JS File -->
+    <script src="/Javascript/adminaddcampaign.js"></script>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <!--<img src="logo.png" alt="">-->
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Blood Bank </span>
+                  
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon' style="color:gray"></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-bar-chart-alt-2 icon' ></i>
+                        <span class="text nav-text">My Profile</span>
+                    </a>
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">About Us</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon' id="col"></i>
+                        <i class='bx bx-sun icon sun' id="col"></i>
+                    </div>
+                    <span class="mode-text text" id="col">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text" id="col">Blood Bank Name</div>
+    </section>
+
+
+    <!-- Campagin Details Div -->
+    <div class="popup" id="popup-1">
+        <div class="content">
+
+           <b> <div class="close-btn" onclick="togglePopup()"
+            style="color: red;">X</div></b>
+            <h1>Add Campagin Details Here!</h1>
+
+            <div class="input-field">
+                <input placeholder="Campaign Name"="text" class="align-left" id="cname">
+            </div>
+
+            <div class="input-field">
+                <input type="number" placeholder="Phone/Landline Number" class="align-right" id="mobno"></div>
+
+            <div class="input-field">
+            <b><label style=" left: 120px;top:140px;" >Day Start</label></b>    
+                <input type="date"  class="align-left" style="top:160px;" id="dstart">
+                <b><label style=" left: 400px;top:140px;" >Day End</label></b>
+                <input type="date" class="align-right"style="top:160px;" id="dend">
+            </div>
+
+            <div class="input-field">
+                <b><label style=" left: 132px;top:220px;" >From :</label></b>   
+               <input type="time" class="align-left" style="top:240px;" id="timef"><br>
+              <b> <label style=" left: 430px;top:220px;" >To:  </label></b>
+               <input type="time" class="align-right" style="top:240px;" id="timet">
+            </div>
+
+                <textarea placeholder="Campaign Address"="text" rows="5" columns="500" id="add"></textarea>
+          
+            <button class="second-button" id="btn" onclick="display()">Add</button>
+            
+        </div>
+    </div>
+    <!-- Pop Up Button -->
+    <div class="button">
+        
+    <button class="btn" onclick="togglePopup()" class="first-button">
+        <i class="fa-solid fa-plus"></i>Add Campaign</button>
+    </div>
+
+    <script>
+        function togglePopup(){
+            document.getElementById("popup-1")
+            .classList.toggle("active")
+        }
+    </script>
+       
+<div class="container">
+<!-- <div class="campaign-list">
+    <div class="card"> -->
+<!-- <div class="campaign-details">
+    <div class="cname">Hello</div> -->
+<!-- </div>
+    </div> -->
+<!-- </div> -->
+</div>
+
+
+
+    <!-- JS -->
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+</body>
+</html>
